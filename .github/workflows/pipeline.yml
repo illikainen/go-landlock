@@ -1,0 +1,30 @@
+---
+name: Pipeline
+
+on: [push, pull_request]  # yamllint disable-line rule:truthy
+
+permissions:
+  contents: read
+
+jobs:
+  pathcheck:
+    uses: illikainen/cicd/.github/workflows/pathcheck.yml@master
+    secrets: inherit  # nosemgrep
+
+  go:
+    uses: illikainen/cicd/.github/workflows/go.yml@master
+    with:
+      build: false
+    secrets: inherit  # nosemgrep
+
+  govulncheck:
+    uses: illikainen/cicd/.github/workflows/govulncheck.yml@master
+    secrets: inherit  # nosemgrep
+
+  golangci-lint:
+    uses: illikainen/cicd/.github/workflows/golangci-lint.yml@master
+    secrets: inherit  # nosemgrep
+
+  opengrep:
+    uses: illikainen/cicd/.github/workflows/opengrep.yml@master
+    secrets: inherit  # nosemgrep

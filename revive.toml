@@ -1,0 +1,55 @@
+enableAllRules = true
+
+[rule.add-constant]
+disabled = true
+
+[rule.argument-limit]
+arguments = [8]
+
+[rule.banned-characters]
+disabled = true
+
+[rule.cognitive-complexity]
+arguments = [200]
+
+[rule.comment-spacings]
+arguments = ["lint"]
+
+[rule.confusing-naming]
+disabled = true
+
+[rule.cyclomatic]
+arguments = [60]
+
+[rule.error-strings]
+disabled = true
+
+[rule.exported]
+disabled = true
+
+[rule.file-header]
+disabled = true
+
+[rule.flag-parameter]
+disabled = true
+
+[rule.function-length]
+arguments = [100,200]
+
+[rule.function-result-limit]
+arguments = [3]
+
+[rule.if-return]
+disabled = true
+
+[rule.line-length-limit]
+arguments = [110]
+
+[rule.max-public-structs]
+arguments = [15]
+
+[rule.package-comments]
+disabled = true
+
+[rule.unused-receiver]
+disabled = true
